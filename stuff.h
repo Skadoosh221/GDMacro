@@ -141,8 +141,8 @@ void Start()
 			}
 			cout << "Locked and loaded!\n";
 		}
-		cout << "Not Recording!\n";
 	}
+	cout << "Not Recording!\nNot Playing!\n";
 }
 SHORT key = VK_SPACE;
 UINT mappedKey = MapVirtualKey(LOBYTE(key), 0);

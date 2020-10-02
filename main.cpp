@@ -20,17 +20,21 @@ void Mac() {
         if (recording) {
             if ((GetAsyncKeyState(VK_RBUTTON) & 0x8000) != 0) {
                 actions[xpos] = 1;
+                Input(1);
             }
             else {
                 actions[xpos] = 0;
+                Input(0);
             }
         }
 
-        if (actions[xpos] == 1) {
-            Input(1);
-        }
-        else {
-            Input(0);
+        if (playing) {
+            if (actions[xpos] == 1) {
+                Input(1);
+            }
+            else {
+                Input(0);
+            }
         }
     }
 }
